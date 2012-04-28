@@ -28,7 +28,7 @@ public class Conexion {
 
 	public void cerrarConexion() {
 		try {
-			conn.commit();
+			//conn.commit();
 			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -39,4 +39,17 @@ public class Conexion {
 	public Connection getConeccion() {
 		return conn;
 	}
+
+	public boolean ejecutar(String sql) {
+		boolean r = false;
+		try {
+			r = stat.execute(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return r;
+	}
+	
+	
 }
