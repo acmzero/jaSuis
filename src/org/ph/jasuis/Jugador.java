@@ -34,5 +34,18 @@ public class Jugador {
 		rating=0;
 		id=-1;
 	}
+	
+	public String getNombre(){
+		return nombre;
+	}
+	public String getNick(){
+		return nick;
+	}
+	public int getRating(){
+		return rating;
+	}
+	public int getEdad(){
+		return edad;
+	}
 
 }

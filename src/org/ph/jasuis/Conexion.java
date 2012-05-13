@@ -36,7 +36,7 @@ public class Conexion {
 
 	}
 
-	public Connection getConeccion() {
+	public Connection getConexion() {
 		return conn;
 	}
 
@@ -51,5 +51,8 @@ public class Conexion {
 		return r;
 	}
 	
+	public Statement getStatement(){
+		return stat;
+	}
 	
 }
