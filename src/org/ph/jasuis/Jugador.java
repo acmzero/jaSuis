@@ -13,11 +13,14 @@ public class Jugador {
 		id=ID;
 		conn=new Conexion();
 		ResultSet rs=conn.ejecutarSql("select * from jugadores where jugador_id="+id);
-		while(rs.next()){
+		
+		if(rs.next()){
 			nombre=rs.getString("nombre");
 			nick=rs.getString("nick");
 			edad=rs.getInt("edad");
 			rating=rs.getInt("rating");
+		}else{
+			System.out.println("Jugador no Existe, verifique ID");
 		}
 	}
 	
@@ -46,6 +49,10 @@ public class Jugador {
 	}
 	public int getEdad(){
 		return edad;
+	}
+	
+	public int getId(){
+		return id;
 	}
 
 }

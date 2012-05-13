@@ -7,7 +7,9 @@ public class Pruebas {
 		
 		Jugador heli=new Jugador();
 		System.out.println(heli.getNombre());
-
+		Equipo fenix=new Equipo(1);
+		System.out.println(fenix.getNombre());
+		fenix.imprimirNombres();
 	}
 
 }
